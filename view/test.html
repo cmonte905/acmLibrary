@@ -1,0 +1,20 @@
+<div ng-controller="testCtrl as testList">
+	<h1>Test test</h1>
+
+	<p>More tests n shit</p>	
+
+	<input type="text" ng-model="s">
+	
+	<ul>
+		<li ng-repeat="items in testList.list | filter:s">
+			{{items.name}} , {{items.age}}
+		</li>
+	</ul>
+
+	<form ng-submit="addPerson()">
+		<input type="text" ng-model="name" >
+		<input type="text" ng-model="age">
+		<input type="submit" value="Submit">
+	</form>
+</div>
+
