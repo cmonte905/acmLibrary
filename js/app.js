@@ -38,5 +38,16 @@ libraryApp.config(function($stateProvider) {
         controller: "testCtrl"
     })
 
+    $stateProvider.state("home", {
+        name: "home",
+        url: "/",
+        templateUrl: "../view/welcome.html"
+    })
+
+	 $stateProvider.state("contact", { 
+	 	 name: "contact",
+		 url: "/contact",
+		 template: '<h1>ACM ENG3 110</h1>'
+	 })
 
 });

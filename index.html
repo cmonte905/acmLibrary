@@ -4,48 +4,17 @@
     <title> ACM Library </title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/sidebar.css">
-    
 </head>
 
 <body class="" ng-app="acmLibraryApp">
-    <div id="wrapper">
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                        Start Bootstrap
-                    </a>
-                </li>
-                <li>
-                    <a href="#">Dashboard</a>
-                </li>
-                <li>
-                    <a href="#">Shortcuts</a>
-                </li>
-                <li>
-                    <a href="#">Overview</a>
-                </li>
-                <li>
-                    <a href="#">Events</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
-        <!-- Page Content -->
+ 
+       <div id="wrapper" class="toggled" ng-include="'view/sidebar.html'">
+       
+       </div>
+<!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
@@ -53,12 +22,8 @@
                         <h1>Simple Sidebar</h1>
                         <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
                         <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
-                        <br><br>
-                        <a ui-sref="hello" ui-sref-active="active">Hello</a>
-                        <a ui-sref="about" ui-sref-active="active">About</a>
-                        <a ui-sref="test" ui-sref-active="active">Test</a>
-                        <!-- needs a previous and a next, collaspable side bar menu? -->
+                        <br>
+                        <br>
                         <div class="container-fluid">
                             <ui-view></ui-view>
                         </div>
@@ -67,8 +32,9 @@
             </div>
         </div>
         <!-- /#page-content-wrapper -->
-    </div>
     <!-- /#wrapper -->
+
+    
     <!-- Angular  -->
     <script src="bower_components/angular/angular.min.js">
     </script>
@@ -86,13 +52,7 @@
     <script src="js/app.js"></script>
     <!-- Angular controllers -->
     <script src="js/angularControllers/testCtrl.js"></script>
-     <!-- Menu Toggle Script -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
+    <!-- Menu Toggle Script -->
 </body>
 
 </html>
